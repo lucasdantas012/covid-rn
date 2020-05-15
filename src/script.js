@@ -2,7 +2,7 @@ var dom = document.getElementById('main');
 var myChart = echarts.init(dom);
 myChart.showLoading();
 
-$.get('geojs-24-mun.json', function (rnJson) {
+$.get('src/geojs-24-mun.json', function (rnJson) {
     myChart.hideLoading()
 
     echarts.registerMap('RN', rnJson, {
@@ -11,7 +11,7 @@ $.get('geojs-24-mun.json', function (rnJson) {
     /*var myLayer = L.geoJSON().addTo('RN');
     myLayer.addData(rnJson);*/
 
-    $.get('13052020.csv', function (data){
+    $.get('src/13052020.csv', function (data){
         var lines = data.split('\n');
 
         var result = [];
